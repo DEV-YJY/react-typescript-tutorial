@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Button = (props: unknown) => {
+type ClassName = {
+  className: string;
+};
+
+export const Button = (props: ClassName) => {
   return <button className={props.className}></button>;
 };
 
