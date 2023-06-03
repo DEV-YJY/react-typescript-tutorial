@@ -1,14 +1,11 @@
-import React from "react";
+import React, { JSXElementConstructor } from "react";
 
 interface Props {
   className: string;
 }
 
-/* @ts-expect-error */
-export const Button = (props: Props) => {
-  return {
-    ohDear: "123",
-  };
+export const Button: React.FC<Props> = (props) => {
+  return <div></div>;
 };
 
 const Parent = () => {
