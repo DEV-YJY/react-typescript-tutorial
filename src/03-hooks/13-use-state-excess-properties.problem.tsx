@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 interface TagState {
-  tagSelected: number | null;
   tags: { id: number; value: string }[];
+  tagSelected: number | null;
 }
 
 export const Tags = () => {
