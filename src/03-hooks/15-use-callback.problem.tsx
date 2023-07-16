@@ -2,8 +2,8 @@ import { useCallback } from "react";
 import { Equal, Expect } from "../helpers/type-utils";
 
 export const Buttons = (props: { id: string }) => {
-  const onClick = useCallback(
-    (buttonName: string): void => {
+  const onClick = useCallback<string>(
+    (buttonName) => {
       console.log(props.id, buttonName);
     },
     [props.id]
