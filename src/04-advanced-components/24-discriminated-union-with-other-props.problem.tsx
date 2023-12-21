@@ -1,12 +1,10 @@
 type ModalProps =
   | {
       variant: "no-title";
-      buttonColor: string;
     }
   | {
       variant: "title";
       title: string;
-      buttonColor: string;
     };
 
 export const Modal = (props: ModalProps) => {
