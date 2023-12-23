@@ -6,7 +6,7 @@ export const Buttons = (props: { id: string }) => {
     (buttonName) => {
       console.log(props.id, buttonName);
     },
-    [props.id]
+    [props.id],
   );
 
   type test = Expect<Equal<typeof onClick, (buttonName: string) => void>>;

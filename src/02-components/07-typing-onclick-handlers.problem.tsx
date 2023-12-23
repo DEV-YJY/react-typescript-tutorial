@@ -1,4 +1,4 @@
-import React, { EventHandler, ReactEventHandler } from "react";
+import React from 'react';
 
 interface ButtonProps {
   className: string;
