@@ -1,12 +1,6 @@
-import React, {ComponentProps} from "react";
+import React from "react";
 
-
-type ExtraType = ComponentProps<'button'> &  {
-  myDiv?: string
-}
-
-
-export const Button = ({ className, ...rest }: ExtraType) => {
+export const Button = ({ className, ...rest }: {}) => {
   return (
     <button {...rest} className={`default-classname ${className}`}></button>
   );
