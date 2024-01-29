@@ -1,10 +1,8 @@
 import { ComponentProps } from "react";
 import { Equal, Expect } from "../helpers/type-utils";
 
-type DoSomething = Omit<ComponentProps<"input">, 'onChange'> & { onChange: (value: string) => void } 
-
 export const Input = (
-  props: DoSomething 
+  props: Omit<ComponentProps<"input">, "onChange"> & { onChange: (value: string) => void }
 ) => {
   return (
     <input
