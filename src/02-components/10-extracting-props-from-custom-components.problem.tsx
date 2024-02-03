@@ -12,7 +12,7 @@ export const NavBar = (props: {
 
 import { Equal, Expect } from "../helpers/type-utils";
 
-type NavBarProps = unknown;
+type NavBarProps = typeof NavBar extends React.FC<infer P> ? P : never;
 
 type test = Expect<
   Equal<
