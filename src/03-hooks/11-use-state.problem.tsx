@@ -1,11 +1,7 @@
 import { useState } from "react";
 
-
 export const Tags = () => {
-  const [tags, setTags] = useState<{
-  id: number,
-  value: string
-}[]>([]);
+  const [tags, setTags] = useState([]);
   return (
     <div>
       {tags.map((tag) => {
