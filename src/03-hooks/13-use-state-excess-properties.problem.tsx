@@ -17,7 +17,7 @@ export const Tags = () => {
           <button
             key={tag.id}
             onClick={() => {
-              setState((currentState): TagState => ({
+              setState((currentState) => ({
                 ...currentState,
                 // @ts-expect-error
                 tagselected: tag.id,
@@ -30,7 +30,7 @@ export const Tags = () => {
       })}
       <button
         onClick={() => {
-          setState((currentState): TagState => ({
+          setState((currentState) => ({
             ...currentState,
             tags: [
               ...currentState.tags,
