@@ -4,7 +4,7 @@ const BACKEND_TO_FRONTEND_STATUS_MAP = {
   0: "pending",
   1: "success",
   2: "error",
-};
+} as any;
 
 type BackendStatus = unknown;
 type FrontendStatus = unknown;

@@ -14,7 +14,7 @@ type ButtonProps = {
    *
    * Hint: you'll need 'typeof' and 'keyof'.
    */
-  variant: keyof typeof classNamesMap
+  variant: "primary" | "secondary" | "success";
 };
 
 export const Button = (props: ButtonProps) => {
