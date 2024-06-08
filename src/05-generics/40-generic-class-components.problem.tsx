@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
 import { Equal, Expect } from "../helpers/type-utils";
 
-type TableProps <T> = {
-  rows: T[];
-  renderRow: (row: T) => ReactNode;
+interface TableProps {
+  rows: any[];
+  renderRow: (row: any) => ReactNode;
 }
 
-export class Table extends React.Component<TableProps<{id: number; name: string}>> {
+export class Table extends React.Component<TableProps> {
   render(): ReactNode {
     return (
       <table>
