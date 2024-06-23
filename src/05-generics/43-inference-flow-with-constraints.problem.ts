@@ -2,22 +2,22 @@ import { createUser } from "fake-external-lib";
 import { useState } from "react";
 import { Equal, Expect } from "../helpers/type-utils";
 
-type Mutation<TArgs extends any[], TReturn> = (...args: TArgs) => Promise<TReturn>;
+type Mutation = (...args: any[]) => Promise<any>;
 
-interface UseMutationReturn<TArgs extends any[], TReturn> {
-  mutate: Mutation<TArgs, TReturn>;
+interface UseMutationReturn {
+  mutate: Mutation;
   isLoading: boolean;
 }
 
-interface UseMutationOptions<TArgs extends any[], TReturn> {
-  mutation: Mutation<TArgs, TReturn>;
+interface UseMutationOptions {
+  mutation: Mutation;
 }
 
-export const useMutation = <TArgs extends any[], TReturn>(opts: UseMutationOptions<TArgs, TReturn>): UseMutationReturn<TArgs, TReturn> => {
+export const useMutation = (opts: UseMutationOptions): UseMutationReturn => {
   const [isLoading, setIsLoading] = useState(false);
 
   return {
-    mutate: async (...args: TArgs) => {
+    mutate: async (...args) => {
       setIsLoading(true);
 
       try {
@@ -48,7 +48,7 @@ mutation.mutate(
     email: "john@doe.com",
   },
   {
-    throwOnError: true, 
+    throwOnError: true,
     // @ts-expect-error extra prop
     extra: "oh dear",
   },
