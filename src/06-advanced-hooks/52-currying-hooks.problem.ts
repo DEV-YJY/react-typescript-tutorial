@@ -15,7 +15,7 @@ const useCustomState = <TValue>(initial: TValue) => {
      * any type. We want to make sure that the type of the
      * thing returned is inferred properly.
      */
-    useComputed: <A>(factory: (value: TValue) => A, deps?: DependencyList) => {
+    useComputed: (factory: (value: any) => any, deps?: DependencyList) => {
       return useMemo(() => {
         return factory(value);
       }, [value, ...(deps || [])]);
