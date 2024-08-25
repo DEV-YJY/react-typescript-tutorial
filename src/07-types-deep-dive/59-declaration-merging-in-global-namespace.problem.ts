@@ -7,6 +7,14 @@ declare global {
     }
   }
 }
+declare global {
+  namespace React {
+    interface MyAwesomeInterface {
+      foo: string;
+      bar: string;
+    }
+  }
+}
 
 /**
  * We can use a feature called declaration merging in TypeScript to
