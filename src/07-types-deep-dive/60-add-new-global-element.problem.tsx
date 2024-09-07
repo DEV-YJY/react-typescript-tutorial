@@ -10,12 +10,22 @@
  * interface in the JSX namespace.
  */
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "something-a": {
+        id: string
+      }
+    } 
+  }
+}
+
 <>
-  <something id="123"></something>
+  <something-a id="123"/>
 
   {/* @ts-expect-error */}
-  <something></something>
+  <something-a/>
 
   {/* @ts-expect-error */}
-  <something id={123}></something>
+  <something-a id={123}/>
 </>;
