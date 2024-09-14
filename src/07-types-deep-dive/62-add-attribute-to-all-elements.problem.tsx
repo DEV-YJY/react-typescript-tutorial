@@ -6,14 +6,6 @@
  * a new attribute to all React elements.
  */
 
-declare global {
-  namespace React {
-    interface HTMLAttributes<A> {
-      testId?: string
-    }
-  }
-}
-
 <>
   <div testId="123" />
   <audio testId="123" />
