@@ -17,7 +17,7 @@ interface ModalChildProps {
   closeModal: () => void;
 }
 
-const Modal = ({ children }: any) => {
+const Modal = ({ children }: {children: React.FC<ModalChildProps>}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
