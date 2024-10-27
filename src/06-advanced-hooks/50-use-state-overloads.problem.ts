@@ -19,10 +19,6 @@ useState;
  * HINT - you'll need to use the function keyword THREE times.
  */
 
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/main
 function maybeReturnsString(defaultString?: string) {
   // If you pass a string, it always returns a string
   if (defaultString) {

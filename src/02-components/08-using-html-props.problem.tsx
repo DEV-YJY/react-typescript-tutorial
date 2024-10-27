@@ -1,10 +1,6 @@
 import React from "react";
 
-export const Button = ({ className, ...rest }: {
-  className?: string
-  onClick: React.MouseEventHandler
-  type: "button" | "submit" | "reset"
-}) => {
+export const Button = ({ className, ...rest }: {}) => {
   return (
     <button {...rest} className={`default-classname ${className}`}></button>
   );
