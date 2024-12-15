@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 export const Component = () => {
-  const id = useRef<string>();
+  const id = useRef();
 
   useEffect(() => {
     id.current = "Random value!";
