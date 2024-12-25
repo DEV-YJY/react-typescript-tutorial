@@ -1,11 +1,15 @@
-type ModalProps =
-  | {
+type ButtonType = {
+  buttonColor: string
+}
+
+type ModalProps  = 
+  ( {
       variant: "no-title";
-    }
+    } & ButtonType
   | {
       variant: "title";
       title: string;
-    };
+    } ) & ButtonType
 
 /**
  * 1. How do we add a `buttonColor` prop to the `ModalProps` type that is
