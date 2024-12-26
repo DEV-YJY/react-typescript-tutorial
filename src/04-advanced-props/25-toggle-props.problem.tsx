@@ -17,7 +17,15 @@ type EmbeddedPlaygroundProps = {
   codeSandboxId?: string;
 };
 
-const EmbeddedPlayground = (props: EmbeddedPlaygroundProps) => {
+type abc = {
+  useStackblitz: true
+  stackblitzId: string
+} | {
+  useStackblitz?: false
+  codeSandboxId: string
+}
+
+const EmbeddedPlayground = (props: abc) => {
   if (props.useStackblitz) {
     return (
       <iframe
