@@ -19,15 +19,11 @@ const buttonPropsMap = {
     // @ts-expect-error
     illegalProperty: "whatever",
   },
-<<<<<<< HEAD
-} satisfies Record<string, ComponentProps<'button'>>;
-=======
-};
->>>>>>> upstream/main
+} satisfies Record<string, ComponentProps<"button">>
 
 type ButtonProps = {
   variant: keyof typeof buttonPropsMap;
-};
+}
 
 /**
  * 1. There's a loooong error message here. Try to decode what the error message
