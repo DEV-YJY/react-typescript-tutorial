@@ -23,7 +23,7 @@ const buttonPropsMap = {
 
 type ButtonProps = {
   variant: keyof typeof buttonPropsMap;
-}
+};
 
 /**
  * 1. There's a loooong error message here. Try to decode what the error message
