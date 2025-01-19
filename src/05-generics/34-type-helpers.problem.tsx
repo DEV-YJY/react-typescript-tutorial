@@ -5,7 +5,9 @@ type ButtonVariant = "primary" | "secondary" | "tertiary";
 type LooseIcon = Icon | (string & {});
 type LooseButtonVariant = ButtonVariant | (string & {});
 
-export const icons: LooseIcon[] = [
+type UnionT<T> = T | (string & {})
+
+export const icons: UnionT<Icon>[] = [
   "home",
   "settings",
   "about",
@@ -13,7 +15,7 @@ export const icons: LooseIcon[] = [
   // I should get autocomplete if I add a new item here!
 ];
 
-export const buttonVariants: LooseButtonVariant[] = [
+export const buttonVariants: UnionT<ButtonVariant>[] = [
   "primary",
   "secondary",
   "tertiary",
