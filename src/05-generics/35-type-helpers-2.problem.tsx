@@ -21,18 +21,7 @@ export type InputProps = (
   label: string;
 };
 
-type UndefinedObj<T> = Partial<Record<keyof T, undefined>>
-
-type AllIn<T> = T | UndefinedObj<T>
-
-type NewType = AllIn<{
-  value: string;
-  onChange: ChangeEventHandler
-}> & {
-  label: string
-}
-
-export const Input = ({ label, ...props }: NewType) => {
+export const Input = ({ label, ...props }: InputProps) => {
   return (
     <div>
       <label>
