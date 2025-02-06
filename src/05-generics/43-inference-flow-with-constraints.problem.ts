@@ -2,18 +2,18 @@ import { createUser } from "fake-external-lib";
 import { useState } from "react";
 import { Equal, Expect } from "../helpers/type-utils";
 
-type Mutation = (...args: any[]) => Promise<any>;
+type Mutation<T extends any[], TR> = (...args: T) => Promise<TR>;
 
-interface UseMutationReturn {
-  mutate: Mutation;
+interface UseMutationReturn<T extends any[], TR> {
+  mutate: Mutation<T, TR>;
   isLoading: boolean;
 }
 
-interface UseMutationOptions {
-  mutation: Mutation;
+interface UseMutationOptions<T extends any[], TR> {
+  mutation: Mutation<T, TR>;
 }
 
-export const useMutation = (opts: UseMutationOptions): UseMutationReturn => {
+export const useMutation = <T extends any[], TR>(opts: UseMutationOptions<T, TR>): UseMutationReturn<T, TR> => {
   const [isLoading, setIsLoading] = useState(false);
 
   return {

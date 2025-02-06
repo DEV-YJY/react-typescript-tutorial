@@ -1,13 +1,13 @@
 import { Equal, Expect } from "../helpers/type-utils";
 
-interface Button<T> {
-  value: T;
+interface Button {
+  value: string;
   label: string;
 }
 
-interface ButtonGroupProps<T> {
-  buttons: Button<T>[];
-  onClick: (value: T) => void;
+interface ButtonGroupProps {
+  buttons: Button[];
+  onClick: (value: string) => void;
 }
 
 /**
@@ -19,7 +19,7 @@ interface ButtonGroupProps<T> {
  *
  * 1. Try to solve this problem using generics.
  */
-const ButtonGroup = <T extends string>(props: ButtonGroupProps<T>) => {
+const ButtonGroup = (props: ButtonGroupProps) => {
   return (
     <div>
       {props.buttons.map((button) => {
