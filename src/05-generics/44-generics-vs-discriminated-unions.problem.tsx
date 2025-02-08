@@ -14,28 +14,20 @@
  * generics that's much simpler. Try to figure out how to do that.
  */
 
-
-export type ModalProps = {
+export type ModalProps<TVariant extends PossibleVariants> = {
   isOpen: boolean;
-  
-} & (
-  {
-    variant: "with-button"
+  variant: TVariant;
+} & (TVariant extends "with-button"
+  ? {
       buttonLabel: string;
       onButtonClick: () => void;
     }
-    |
-    {
-          variant: "without-button"
+  : {});
 
-    }
-  
-)
-   
+export type PossibleVariants = "with-button" | "without-button";
 
-
-export const Modal = (
-  props: ModalProps,
+export const Modal = <TVariant extends PossibleVariants>(
+  props: ModalProps<TVariant>,
 ) => {
   // ...
   return null;
