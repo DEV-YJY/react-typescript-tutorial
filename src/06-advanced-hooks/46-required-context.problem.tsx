@@ -14,8 +14,8 @@ import { Equal, Expect } from "../helpers/type-utils";
  *
  * 1. See if you can fix it!
  */
-const createRequiredContext = <T,>() => {
-  const context = React.createContext<T | null>(null);
+const createRequiredContext = () => {
+  const context = React.createContext(null);
 
   const useContext = () => {
     const contextValue = React.useContext(context);
@@ -27,7 +27,7 @@ const createRequiredContext = <T,>() => {
     return contextValue;
   };
 
-  return [useContext, context.Provider] as const
+  return [useContext, context.Provider];
 };
 
 const [useUser, UserProvider] = createRequiredContext<{
