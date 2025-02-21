@@ -2,7 +2,14 @@ import { appendVideoToDomAndPlay, fetchVideo } from "fake-external-lib";
 import { useEffect, useState } from "react";
 
 export const useLoadAsyncVideo = (src: string) => {
-  const [state, setState] = useState({
+  const [state, setState] = useState<{
+    status: "loading"
+  } | {
+    status: "loaded"
+  } | {
+    status: "error",
+    error: Error
+  }>({
     status: "loading",
   });
 
