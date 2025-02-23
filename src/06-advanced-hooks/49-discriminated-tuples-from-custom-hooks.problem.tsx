@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 
 export type Result<T> = [
-  "loading" | "success" | "error",
-  T | Error | undefined,
-];
+  "loading", undefined
+] | ["error", Error] | ["success", T]
 
 /**
  * Let's look at one more example of discriminated unions. This time, we're
