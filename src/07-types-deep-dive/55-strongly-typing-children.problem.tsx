@@ -29,5 +29,6 @@ const Select = (props: { children: OptionType }) => {
 };
 
 <Select>
-  <Option />
+  {/* <Option /> */}
+  {Option()}
 </Select>;

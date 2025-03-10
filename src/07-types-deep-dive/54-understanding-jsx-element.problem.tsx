@@ -26,7 +26,7 @@ const Component = () => {
  *
  * https://stackoverflow.com/questions/39668731/what-typescript-version-is-visual-studio-code-using-how-to-update-it
  */
-const Component2 = (): React.ReactElement => {
+const Component2 = (): React.ReactNode => {
   return <div></div>;
 };
 
@@ -48,6 +48,6 @@ const Component3 = (): React.ReactElement => {
 /**
  * 4b. ...but this one does?
  */
-const Component4 = (): React.ReactNode => {
+const Component4 = (): React.ReactElement => {
   return "hello!";
 };
