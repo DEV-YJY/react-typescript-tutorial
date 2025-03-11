@@ -3,7 +3,10 @@ declare global {
     interface IntrinsicElements {
       "something-solution": {
         id: string;
-      };
+      },
+      myNewElement: {
+     foo: string;
+    }
     }
   }
 }
