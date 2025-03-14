@@ -21,15 +21,6 @@ declare global {
  * https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces
  */
 
-declare global {
-  namespace React {
-    interface MyAwesomeInterface {
-      foo: string;
-      bar: string
-    }
-  }
-}
-
 type test = Expect<
   Equal<React.MyAwesomeInterface, { foo: string; bar: string }>
 >;
