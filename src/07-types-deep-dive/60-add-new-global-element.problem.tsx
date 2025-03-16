@@ -10,16 +10,6 @@
  * interface in the JSX namespace.
  */
 
-declare global {
-  namespace React {
-    interface IG {
-      "something": {
-        id: string
-      }
-    }
-  }
-}
-
 <>
   <something id="123"></something>
 
