@@ -1,4 +1,4 @@
-import { Equal, Expect } from "../helpers/type-utils";
+ { Equal, Expect } from "../helpers/type-utils";
 
 declare global {
   namespace React {
